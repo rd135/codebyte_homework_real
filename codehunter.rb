@@ -38,5 +38,14 @@ def LongestWord(sen)
   
 end
 
+#codebyte_4
+def LetterChanges(str)
+
+  # code goes here
+  str.tr!('a-z','b-z')
+  str.tr!('aeiou','AEIOU')
+  return str 
+         
+end
 
 
