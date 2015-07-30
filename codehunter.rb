@@ -59,4 +59,23 @@ def SimpleAdding(num)
          
 end
 
+#codebyte_6
+def LetterCapitalize(str)
 
+  capitalized = ''
+  doCap = 1
+  str.each_char do |x|
+    if doCap == 1
+      x = x.upcase
+    end
+    if(x == ' ')
+      doCap = 1
+    else
+      doCap = 0
+    end
+    capitalized = capitalized + x
+  end
+  
+  return capitalized 
+         
+end
