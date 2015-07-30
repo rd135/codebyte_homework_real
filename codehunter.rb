@@ -19,4 +19,24 @@ def FirstFactorial(num)
        
 end
 
+#codebyte_3
+def LongestWord(sen)
+
+  # code goes here
+  longest_word = ""
+  
+  word = sen.split(" ")
+  
+  word.each do |word|
+    word.gsub!(/\W/, "")
+    if word.length > longest_word.length
+      longest_word = word
+    end
+  end  
+  
+  return longest_word
+  
+end
+
+
 
