@@ -79,3 +79,20 @@ def LetterCapitalize(str)
   return capitalized 
          
 end
+
+#codebyte_7
+def SimpleSymbols(str)
+
+  arr = str.chars.to_a
+  arr.each_index do |x|
+    if(arr[x].match(/[a-zA-Z]/))
+      if(x == 0 or x + 1 == arr.length or arr[x - 1] != '+' or arr[x + 1] != '+')
+        return "false"
+      end
+    end
+  end
+  
+  return "true" 
+         
+end
+
