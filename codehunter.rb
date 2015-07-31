@@ -109,4 +109,90 @@ def CheckNums(num1,num2)
          
 end
 
+#codebyte_9
+def TimeConvert(num)
+
+  hours = num / 60
+  minutes = num - hours * 60
+  return "#{hours}:#{minutes}"
+         
+end
+
+#codebyte_10
+def AlphabetSoup(str)
+
+  chars = str.chars.to_a
+  
+  chars.each_index do |i|
+    (chars.length - i - 1).times do |job|
+      if chars[job] > chars[job + 1]
+        chars[job], chars[job + 1] = chars[job + 1], chars[job]
+      end
+    end
+  end
+  
+  return chars.join('') 
+         
+end
+
+#codebyte_11
+
+def ABCheck(str)
+
+  counter = 0
+  str.each_char do |x|
+    if(x == 'a' && counter + 4 < str.length && str.chars.to_a[counter + 4] == 'b')
+      return true
+    end
+    counter += 1
+  end
+  return false 
+         
+end
+
+#codebyte_12
+
+def VowelCount(str)
+
+  counter = 0
+  str.each_char do |x|
+    if(x.match(/[aieou]/))
+      counter += 1
+    end
+  end
+  return counter
+         
+end
+
+#codebyte_13
+
+def WordCount(str)
+
+  words = str.split(" ")
+  return words.length 
+         
+end
+
+#codebyte_14
+
+def ExOh(str)
+
+  counter1 = 0
+  counter2 = 0
+  str.each_char do |x|
+    if(x == 'x')
+      counter1 += 1
+    elsif(x == 'o')
+      counter2 += 1
+    end
+  end
+  return counter1 == counter2 
+         
+end
+
+#codebyte_15
+
+def Palindrome(str)
+  (str = str.gsub(/\s+/, "")).reverse == str ? "true" : "false"
+end
 
